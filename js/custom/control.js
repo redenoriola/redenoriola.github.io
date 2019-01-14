@@ -1,9 +1,27 @@
+//WoW Js
+new WOW().init();
+//
+//Smooth Scrolling
+$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: (target.offset().top - 54)
+            }, 1000, "easeInOutExpo");
+            return false;
+        }
+    }
+});
+//Show Preloader while loading
 $(window).on('load', function () {
-    $(".preloader").css("display", "none");
+    $(".preloader").css("top", "100%");
     $("#home-bg h1:nth-of-type(1)").addClass("bounceInDown");
     $("#home-bg h1:nth-of-type(2)").addClass("fadeInDown");
+    $("body").removeClass("loading");
 });
-
+//Modal Detail Initializations
 var laundrywash = [
     {
         tag: 'Overview',
@@ -102,19 +120,12 @@ var humbleshop = [
         details: "This is where the customer can see all of his/her orders check the time and date of its arrival. ",
     },
 ];
-new WOW().init();
-$('.slide-in').click(function (e) {
-    e.preventDefault();
-});
-$('.slide-in').on('click', function () {
-    $('.fade-in').toggleClass('show');
-});
-
+//Start off Document Ready
 $(document).ready(function () {
-
     var scroll_start = 0;
     var scroll_height = $("#home").height() - $("nav").height();
     var triggerTop = $("#home").height() / 2;
+    //Navbar Actions
     $(document).scroll(function () {
         scroll_start = $(this).scrollTop();
         if (scroll_start > scroll_height) {
@@ -128,20 +139,9 @@ $(document).ready(function () {
             $("#home nav").css({ "top": "0", "background": "transparent", "box-shadow": "none", "position": "absolute" });
             $(".navbar li a").css("color", "white");
         }
-    })
-    // Get the button that opens the modal
-    $(".btn-modal").click(function () {
-        $("#portfolioModal").modal();
-        $(".carousel").css("display", "none");
-        // var project_name = this.id;
-        //$(".modal-details").css("height", detailContainerHeight);
-        var index = $(this).closest(".portfolio-card").index() + 1;
-        var count = $(".carousel:nth-child(" + (index + 1) + ") .carousel-item").length;
-        $(".carousel").eq(index - 1).css("display", "block");
-        $("#temp").val(index);
-        $("#temp1").val(count);
-        findActive(0);
     });
+    $("body").addClass("loading");
+    //Carousel Controls
     $(".carousel-control-prev").click(function () {
         findActive(-1);
     })
@@ -152,7 +152,19 @@ $(document).ready(function () {
         $(".carousel-indicators li").removeClass("active");
         $(".carousel-indicators li:eq(0)").addClass("active");
     })
+    // Start Modal content processing
+    $(".btn-modal").click(function () {
+        $("#portfolioModal").modal();
+        $(".carousel").css("display", "none");
+        var index = $(this).closest(".portfolio-card").index() + 1;
+        var count = $(".carousel:nth-child(" + (index + 1) + ") .carousel-item").length;
+        $(".carousel").eq(index - 1).css("display", "block");
+        $("#temp").val(index);
+        $("#temp1").val(count);
+        findActive(0);
+    });
 });
+//Finding active image in modal
 function findActive(x) {
     var active_id, index, max;
     index = $("#temp").val();
@@ -165,7 +177,6 @@ function findActive(x) {
             if ($(this).hasClass('active')) {
                 var temp = 1 * x;
                 active_id = $(this).index() + temp;
-
                 if (temp == -1 && active_id == -1) {
                     active_id = max - 1;
                 }
@@ -175,6 +186,7 @@ function findActive(x) {
             }
         });
     }
+    //Display Modal details
     switch (index) {
         case "1":
             $(".modal-details .project-title").html("Laundry Wash");

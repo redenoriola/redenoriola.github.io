@@ -23,26 +23,11 @@
   font-family: 'nunito-light';
   src: url(../../fonts/NunitoSans-Light.ttf);
   font-weight: 800; }
-::-webkit-scrollbar {
-  width: 8px; }
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: white; }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #555; }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #252934; }
-
-#preload {
-  display: none; }
-
 .section-holder {
-  padding: 100px 0 !important; }
+  padding: 80px 0 !important; }
+  @media screen and (max-width: 576px) {
+    .section-holder {
+      padding: 50px 0 !important; } }
 
 .section-title {
   font-family: nunito-bold;
@@ -73,6 +58,9 @@
   overflow-wrap: break-word;
   font-size: 18px;
   line-height: 29px; }
+
+.loading {
+  overflow: hidden; }
 
 .container-fluid {
   text-align: center;
@@ -115,6 +103,13 @@
   position: relative;
   z-index: 100; }
 
+@media screen and (min-width: 992px) {
+  #home nav .mobile-icon {
+    visibility: visible; }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0; } }
 @media screen and (max-width: 760px) {
   .container-fluid {
     padding: 0; } }
@@ -134,17 +129,60 @@
   padding: 0; }
 
 @media screen and (max-width: 480px) {
+  #home-bg {
+    padding-top: 0; }
+
   #avatar-holder {
-    width: 100%; } }
+    width: 100%; }
+
+  #about-me .container {
+    padding: 10px; }
+
+  #Portfolio .container {
+    padding: 0; }
+
+  .home-content h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin: 0; }
+
+  .home-content a {
+    margin-top: 20px;
+    padding: 0;
+    font-size: 22px; }
+
+  .home-content .social-media a {
+    visibility: hidden; }
+
+  .home-content .social-links {
+    font-size: 22px; }
+
+  #home-bg .v-line {
+    height: 100px;
+    border-left: 5px solid #ffffffc7;
+    margin: 0 5px; }
+
+  #get-in-touch .social-media {
+    margin: 0 auto 50px auto; }
+
+  #get-in-touch .social-media i {
+    font-size: 22px; }
+
+  #get-in-touch .social-media a {
+    visibility: visible;
+    border: 0;
+    padding: 0;
+    font-size: 22px;
+    letter-spacing: 20px; } }
 .preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: #fff;
   transition: 1s ease-in-out;
-  z-index: 100; }
+  z-index: 1000; }
 
 .loader {
   position: absolute;
@@ -189,7 +227,7 @@
   100% {
     height: 0; } }
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.545)), url("../../images/topcover.jpg") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.545)), url("https://www.dl.dropboxusercontent.com/s/zn1hsrah85kkknm/topcover.jpg?dl=0") center;
   background-size: cover;
   height: 100vh; }
   #home #home-bg {
@@ -203,13 +241,15 @@
       color: white;
       font-family: nunito-bold;
       font-size: 15px; }
-      #home #home-bg .intro h1 span {
-        color: #F05033; }
-      #home #home-bg .intro h1:nth-child(1) {
-        font-size: 80px; }
-      #home #home-bg .intro h1:nth-child(2) {
-        font-family: nunito-extrabold;
-        font-size: 80px; }
+      #home #home-bg .intro h1 {
+        font-size: 5rem; }
+        #home #home-bg .intro h1 span {
+          color: #F05033; }
+        #home #home-bg .intro h1:nth-child(2) {
+          font-family: nunito-extrabold; }
+        @media screen and (max-width: 576px) {
+          #home #home-bg .intro h1 {
+            font-size: 3.5rem; } }
       #home #home-bg .intro .intro p {
         letter-spacing: 3px;
         background: rgba(0, 0, 0, 0.51);
@@ -222,8 +262,15 @@
     width: 100%;
     background: transparent;
     position: absolute;
-    z-index: 1000;
+    z-index: 100;
     transition: all 1s ease; }
+    #home .navbar .navbar-toggler {
+      right: 0;
+      padding: 0; }
+      #home .navbar .navbar-toggler .navbar-toggler-icon {
+        color: #ff5a3d; }
+        #home .navbar .navbar-toggler .navbar-toggler-icon i {
+          font-size: 30px; }
     #home .navbar ul {
       margin: 0 100px; }
       #home .navbar ul li a {
@@ -256,10 +303,17 @@
           bottom: 0;
           top: 45px;
           transition: all 0.3s ease; }
-        #home .navbar ul li a:hover:before {
+        #home .navbar ul li a:hover:before, #home .navbar ul li a:hover:after {
           width: 50%; }
-        #home .navbar ul li a:hover:after {
-          width: 50%; }
+        @media screen and (max-width: 992px) {
+          #home .navbar ul li a:hover:before {
+            width: 10%; }
+          #home .navbar ul li a:hover:after {
+            width: 0; } }
+
+body, html {
+  margin: 0;
+  padding: 0; }
 
 #about-me {
   background-color: #fff;
@@ -366,6 +420,12 @@
     overflow: hidden;
     border: none;
     border-radius: 0; }
+    @media screen and (max-width: 476px) {
+      #Portfolio .portfolio-card {
+        height: 250px; } }
+    @media screen and (max-width: 350px) {
+      #Portfolio .portfolio-card {
+        height: 200px; } }
     #Portfolio .portfolio-card .face {
       margin: auto;
       top: 0%;
@@ -378,15 +438,15 @@
       opacity: 1;
       background: #F6F6F7; }
     #Portfolio .portfolio-card:nth-child(1) {
-      background: url("../../images/portfolio/laundrywash0.png") center left/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/7l5094i0my9h6yi/laundrywash0.png?dl=0") center left/cover; }
     #Portfolio .portfolio-card:nth-child(2) {
-      background: url("../../images/portfolio/sweetsunny0.png") center left/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/vdgmt3kzozkrity/sweetsunny0.png?dl=0ng") center left/cover; }
     #Portfolio .portfolio-card:nth-child(3) {
-      background: url("../../images/portfolio/genesis0.png") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/9sp0enz6e15vfp6/genesis0.png?dl=0") center center/cover; }
     #Portfolio .portfolio-card:nth-child(4) {
-      background: url("../../images/portfolio/dms0.png") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png?dl=0") center center/cover; }
     #Portfolio .portfolio-card:nth-child(5) {
-      background: url("../../images/portfolio/humbleshop0.png") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png?dl=0") center center/cover; }
     #Portfolio .portfolio-card .tools {
       opacity: 0;
       text-align: center;
@@ -404,12 +464,19 @@
         transition: .3s ease;
         text-align: center;
         font-size: 20px;
-        padding: 0 25px; }
+        padding: 0; }
         #Portfolio .portfolio-card .tools div span {
           font-family: nunito-light;
           font-size: 18px;
           color: #F05033;
           padding: 0 10px; }
+        @media screen and (max-width: 476px) {
+          #Portfolio .portfolio-card .tools div h1, #Portfolio .portfolio-card .tools div span {
+            font-size: 16px; }
+          #Portfolio .portfolio-card .tools div .btn-modal {
+            font-size: 16px;
+            margin-top: 15px;
+            padding: 5px 20px; } }
         #Portfolio .portfolio-card .tools div:nth-child(1) {
           top: 0; }
         #Portfolio .portfolio-card .tools div:nth-child(2) {
@@ -439,7 +506,7 @@
   #contact-me:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 0;
     width: 30%;
     background: #414141;
@@ -448,7 +515,7 @@
   #contact-me:after {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 0;
     width: 50%;
     background: #414141;
@@ -479,6 +546,24 @@
     color: #495057; }
     #contact-me .form-control .submit-form {
       position: relative; }
+
+footer#social-media {
+  text-align: center;
+  background-color: #21242d;
+  padding: 50px;
+  position: relative; }
+  footer#social-media a {
+    padding: 20px 10px;
+    margin: 0; }
+    footer#social-media a .social-links {
+      font-size: 20px;
+      color: white; }
+    footer#social-media a .social-links:hover {
+      color: #45bafc; }
+  footer#social-media #footnote {
+    margin-top: 25px;
+    color: rgba(133, 133, 133, 0.829);
+    font-size: 15px; }
 
 #portfolioModal .modal-dialog {
   margin: 0 auto; }
@@ -528,80 +613,5 @@
         border: 2px solid #f75f45;
         background: transparent;
         color: #f75f45; }
-
-@media screen and (min-width: 992px) {
-  #home nav .mobile-icon {
-    visibility: visible; }
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0;
-    padding-left: 0; } }
-@media screen and (max-width: 480px) {
-  #home-bg {
-    padding-top: 120px; }
-
-  #avatar-holder {
-    width: 100%; }
-
-  #about-me .container {
-    padding: 10px; }
-
-  #Portfolio .container {
-    padding: 0; }
-
-  .home-content h1 {
-    font-size: 28px;
-    letter-spacing: 2px;
-    margin: 0; }
-
-  .home-content a {
-    margin-top: 20px;
-    padding: 0;
-    font-size: 22px; }
-
-  .home-content .social-media a {
-    visibility: hidden; }
-
-  .home-content .social-links {
-    font-size: 22px; }
-
-  #home-bg .v-line {
-    height: 100px;
-    border-left: 5px solid #ffffffc7;
-    margin: 0 5px; }
-
-  #get-in-touch .social-media {
-    margin: 0 auto 50px auto; }
-
-  #get-in-touch .social-media i {
-    font-size: 22px; }
-
-  #get-in-touch .social-media a {
-    visibility: visible;
-    border: 0;
-    padding: 0;
-    font-size: 22px;
-    letter-spacing: 20px; } }
-#social-media {
-  text-align: center;
-  background-color: #21242d;
-  padding: 50px;
-  position: relative; }
-
-#social-media a {
-  padding: 20px 10px;
-  margin: 0; }
-
-.social-links {
-  font-size: 20px;
-  color: white; }
-
-.social-links:hover {
-  color: #45bafc; }
-
-#footnote {
-  margin-top: 25px;
-  color: rgba(133, 133, 133, 0.829);
-  font-size: 15px; }
 
 /*# sourceMappingURL=style.css.map */
