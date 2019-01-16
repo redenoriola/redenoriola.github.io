@@ -53,6 +53,19 @@
   color: #000;
   font-size: 18px; }
 
+.disable {
+  pointer-events: none;
+  background: #c5c7ca;
+  color: #495057;
+  border: none; }
+
+.link-anim {
+  color: #000 !important; }
+  .link-anim:hover {
+    color: #f8755e !important; }
+  .link-anim.active {
+    color: #f8755e; }
+
 .word-wrap {
   text-align: justify;
   overflow-wrap: break-word;
@@ -273,47 +286,28 @@
           font-size: 30px; }
     #home .navbar ul {
       margin: 0 100px; }
-      #home .navbar ul li a {
+      #home .navbar ul .nav-link {
         font-family: nunito-extrabold;
-        margin: 0 15px;
         color: white;
+        margin: 0 15px;
         font-size: 14px;
         font-weight: 500px;
-        position: relative;
         padding: 0.3rem 0;
         letter-spacing: 0.5px;
         text-transform: uppercase; }
-        #home .navbar ul li a:before {
-          content: '';
-          height: 5px;
-          width: 0;
-          background: #F05033;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          top: 45px;
-          transition: all 0.3s ease; }
-        #home .navbar ul li a:after {
-          content: '';
-          height: 5px;
-          width: 0;
-          background: #F05033;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          top: 45px;
-          transition: all 0.3s ease; }
-        #home .navbar ul li a:hover:before, #home .navbar ul li a:hover:after {
-          width: 50%; }
-        @media screen and (max-width: 992px) {
-          #home .navbar ul li a:hover:before {
-            width: 10%; }
-          #home .navbar ul li a:hover:after {
-            width: 0; } }
+        #home .navbar ul .nav-link:hover {
+          transition: 0.3s ease;
+          color: #f8755e; }
+        #home .navbar ul .nav-link.active {
+          color: #f8755e !important;
+          background-color: transparent; }
+          #home .navbar ul .nav-link.active:hover {
+            background-color: transparent; }
 
 body, html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
 
 #about-me {
   background-color: #fff;
@@ -400,17 +394,17 @@ body, html {
     #technical-skills .card:hover {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
       transition: all 0.5s ease;
-      z-index: 100; }
+      z-index: 10; }
     #technical-skills .card img {
       width: 55px;
       height: 55px;
       margin: 20px auto 0;
       border-radius: 6px; }
 
-#Portfolio {
+#portfolio {
   background: #fff;
   position: relative; }
-  #Portfolio .portfolio-card {
+  #portfolio .portfolio-card {
     color: white;
     height: 300px;
     min-width: 200px;
@@ -421,12 +415,12 @@ body, html {
     border: none;
     border-radius: 0; }
     @media screen and (max-width: 476px) {
-      #Portfolio .portfolio-card {
+      #portfolio .portfolio-card {
         height: 250px; } }
     @media screen and (max-width: 350px) {
-      #Portfolio .portfolio-card {
+      #portfolio .portfolio-card {
         height: 200px; } }
-    #Portfolio .portfolio-card .face {
+    #portfolio .portfolio-card .face {
       margin: auto;
       top: 0%;
       bottom: 0%;
@@ -434,54 +428,54 @@ body, html {
       right: 0%;
       width: 90%;
       position: absolute; }
-    #Portfolio .portfolio-card:hover .tools {
+    #portfolio .portfolio-card:hover .tools {
       opacity: 1;
       background: #F6F6F7; }
-    #Portfolio .portfolio-card:nth-child(1) {
+    #portfolio .portfolio-card:nth-child(1) {
       background: url("https://www.dl.dropboxusercontent.com/s/7l5094i0my9h6yi/laundrywash0.png?dl=0") center left/cover; }
-    #Portfolio .portfolio-card:nth-child(2) {
+    #portfolio .portfolio-card:nth-child(2) {
       background: url("https://www.dl.dropboxusercontent.com/s/vdgmt3kzozkrity/sweetsunny0.png?dl=0ng") center left/cover; }
-    #Portfolio .portfolio-card:nth-child(3) {
+    #portfolio .portfolio-card:nth-child(3) {
       background: url("https://www.dl.dropboxusercontent.com/s/9sp0enz6e15vfp6/genesis0.png?dl=0") center center/cover; }
-    #Portfolio .portfolio-card:nth-child(4) {
+    #portfolio .portfolio-card:nth-child(4) {
       background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png?dl=0") center center/cover; }
-    #Portfolio .portfolio-card:nth-child(5) {
+    #portfolio .portfolio-card:nth-child(5) {
       background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png?dl=0") center center/cover; }
-    #Portfolio .portfolio-card .tools {
+    #portfolio .portfolio-card .tools {
       opacity: 0;
       text-align: center;
       transition: .5s ease;
       width: 100%;
       height: 100%; }
-      #Portfolio .portfolio-card .tools h1 {
+      #portfolio .portfolio-card .tools h1 {
         color: #000;
         font-family: nunito-extrabold;
         font-size: 20px;
         text-transform: uppercase; }
-      #Portfolio .portfolio-card .tools div {
+      #portfolio .portfolio-card .tools div {
         width: 100%;
         position: absolute;
         transition: .3s ease;
         text-align: center;
         font-size: 20px;
         padding: 0; }
-        #Portfolio .portfolio-card .tools div span {
+        #portfolio .portfolio-card .tools div span {
           font-family: nunito-light;
           font-size: 18px;
           color: #F05033;
           padding: 0 10px; }
         @media screen and (max-width: 476px) {
-          #Portfolio .portfolio-card .tools div h1, #Portfolio .portfolio-card .tools div span {
+          #portfolio .portfolio-card .tools div h1, #portfolio .portfolio-card .tools div span {
             font-size: 16px; }
-          #Portfolio .portfolio-card .tools div .btn-modal {
+          #portfolio .portfolio-card .tools div .btn-modal {
             font-size: 16px;
             margin-top: 15px;
             padding: 5px 20px; } }
-        #Portfolio .portfolio-card .tools div:nth-child(1) {
+        #portfolio .portfolio-card .tools div:nth-child(1) {
           top: 0; }
-        #Portfolio .portfolio-card .tools div:nth-child(2) {
+        #portfolio .portfolio-card .tools div:nth-child(2) {
           bottom: 0; }
-        #Portfolio .portfolio-card .tools div button {
+        #portfolio .portfolio-card .tools div button {
           font-size: 16px;
           padding: 8px 30px;
           border: 2px solid #F05033;
@@ -489,14 +483,14 @@ body, html {
           text-transform: uppercase;
           background: transparent;
           transition: all 0.5s ease; }
-        #Portfolio .portfolio-card .tools div button:hover {
+        #portfolio .portfolio-card .tools div button:hover {
           text-decoration: none;
           background: #F05033;
           color: #fff;
           cursor: pointer; }
-      #Portfolio .portfolio-card .tools:hover div:nth-child(1) {
+      #portfolio .portfolio-card .tools:hover div:nth-child(1) {
         top: 24%; }
-      #Portfolio .portfolio-card .tools:hover div:nth-child(2) {
+      #portfolio .portfolio-card .tools:hover div:nth-child(2) {
         bottom: 24%; }
 
 #contact-me {
@@ -562,15 +556,16 @@ footer#social-media {
       color: #45bafc; }
   footer#social-media #footnote {
     margin-top: 25px;
-    color: rgba(133, 133, 133, 0.829);
+    color: rgba(235, 235, 235, 0.829);
     font-size: 15px; }
 
 #portfolioModal .modal-dialog {
   margin: 0 auto; }
   #portfolioModal .modal-dialog #close-modal {
     position: absolute;
-    right: 2%;
-    top: 1%;
+    font-size: 2.5rem;
+    right: 3%;
+    bottom: 3%;
     z-index: 1000; }
   #portfolioModal .modal-dialog .modal-body {
     height: 99vh;
@@ -589,7 +584,7 @@ footer#social-media {
     #portfolioModal .modal-dialog .modal-body .modal-details {
       padding: 1.2rem; }
       #portfolioModal .modal-dialog .modal-body .modal-details .project-title {
-        font-family: nunito-extrabold;
+        font-family: nunito-regular;
         font-size: 1.8rem; }
         @media screen and (max-width: 476px) {
           #portfolioModal .modal-dialog .modal-body .modal-details .project-title {

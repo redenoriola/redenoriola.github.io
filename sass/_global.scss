@@ -1,0 +1,187 @@
+  @font-face {
+    font-family: 'nunito-regular';
+    src: url(../../fonts/NunitoSans-Regular.ttf);
+    font-style: normal;
+    font-weight: 600;  
+  }
+  @font-face{
+    font-family: 'nunito-semibold';
+    src: url(../../fonts/NunitoSans-SemiBold.ttf);
+    font-style: normal;
+    font-weight: 400;
+  }
+  @font-face{
+    font-family: 'nunito-bold';
+    src: url(../../fonts/NunitoSans-Bold.ttf);
+    font-weight: 800;
+  }
+  @font-face{
+    font-family: 'nunito-extrabold';
+    src: url(../../fonts/NunitoSans-ExtraBold.ttf);
+    font-style: bold;
+    font-weight: 800;
+  }
+  @font-face{
+    font-family: 'nunito-light';
+    src: url(../../fonts/NunitoSans-Light.ttf);
+    font-weight: 800;
+  }
+.section-holder{
+    padding: 80px 0 !important;
+        @media screen and (max-width: 576px) {
+        padding: 50px 0 !important;
+    }
+}
+.section-title{
+  font-family: nunito-bold;   
+  font-size: 300px;
+  font-weight: 700;
+  line-height: 1.14;
+  position: relative;
+  margin-bottom: 70px;
+    h1{
+    position: relative;
+        &:after{
+            content: '';
+            height: 30px;
+            width: 2px;
+            background: #FF3636;
+            position: absolute;
+            left: 50%;
+            bottom: -35px;
+            display: block;
+        }
+    }   
+}
+.highlight{
+    font-family: nunito-bold;
+    color:#000;
+    font-size:18px;
+}
+.disable{
+    pointer-events: none;
+    background: #c5c7ca;
+    color: #495057;
+    border: none;
+}
+.link-anim{
+    color: #000!important;
+    &:hover{
+        color: #f8755e !important;
+    }
+    &.active{
+        color: #f8755e;
+    }
+}
+.word-wrap{
+    text-align:justify;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    line-height: 29px;
+}
+.loading{
+    overflow: hidden;
+}
+.container-fluid{
+    text-align: center;
+    padding: 4rem 8rem ;
+    height: auto;
+    width:100%;
+    box-sizing: border-box;
+}
+.btn-effect{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #FF3636;
+    border-radius: 2px;
+    color: #fff;
+    overflow: hidden;
+}
+.btn-effect:before{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 100%;
+    border-radius: 2px;
+    background:#F6F6F7;
+    top: 0;
+    left: -100%;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+}
+.btn-effect:hover{
+    border: none;
+    color: #FF3636;
+}
+.btn-effect:hover:before{
+    border: 1px solid #FF3636;
+    left:0;
+}
+.btn-effect span{
+    font-family: nunito-semibold;
+    position: relative;
+    z-index: 100;
+}
+@media screen and (min-width: 992px) {
+    #home nav .mobile-icon{
+        visibility: visible;
+    }
+   .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    }
+}
+@media screen and (max-width: 760px) {
+    .container-fluid{
+      padding:0;
+    }
+  }
+.card h3{
+    font-family: nunito-light;
+    margin-top:10px;
+    font-size: 18px;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none !important;
+    outline: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+        #home-bg{padding-top:0;}
+        #avatar-holder{width:100%;}
+        #about-me .container{padding:10px;}
+        #Portfolio .container{padding:0;}
+        .home-content h1{
+          font-size:28px;
+          letter-spacing: 2px;
+          margin:0;
+        }  
+        .home-content a {
+          margin-top:20px;
+          padding:0;
+          font-size: 22px;
+        }
+        .home-content .social-media a{ visibility: hidden;}
+        .home-content .social-links{font-size: 22px;}
+        #home-bg .v-line{
+          height: 100px;
+          border-left: 5px solid #ffffffc7;
+          margin: 0 5px;
+        }
+        #get-in-touch .social-media{margin:0 auto 50px auto;}
+        #get-in-touch .social-media i{font-size: 22px;}
+        #get-in-touch .social-media a{
+          visibility: visible;
+          border: 0;
+          padding:0;
+          font-size: 22px;
+          letter-spacing: 20px;
+        }
+}

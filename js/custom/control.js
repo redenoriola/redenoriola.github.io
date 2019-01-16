@@ -1,32 +1,3 @@
-//WoW Js
-new WOW().init();
-//smooth sliding
-$('.slide-in').click(function (e) {
-    e.preventDefault();
-});
-$('.slide-in').on('click', function () {
-    $('.fade-in').toggleClass('show');
-});
-//Smooth Scrolling
-$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: (target.offset().top - 54)
-            }, 1000, "easeInOutExpo");
-            return false;
-        }
-    }
-});
-//Show Preloader while loading
-$(window).on('load', function () {
-    $(".preloader").css("top", "100%");
-    $("#home-bg h1:nth-of-type(1)").addClass("bounceInDown");
-    $("#home-bg h1:nth-of-type(2)").addClass("fadeInDown");
-    $("body").removeClass("loading");
-});
 //Modal Detail Initializations
 var laundrywash = [
     {
@@ -44,11 +15,7 @@ var laundrywash = [
     {
         tag: 'Contact',
         details: 'This section has the usual information like the email, location, contact number and other relevant information. Either customers or visitors can send a message to contact the management directly.'
-    },
-    {
-        tag: 'Gallery',
-        details: ''
-    },
+    }
 ];
 var sweetsunny = [
     {
@@ -126,24 +93,57 @@ var humbleshop = [
         details: "This is where the customer can see all of his/her orders check the time and date of its arrival. ",
     },
 ];
+(function ($) {
+    "use strict"; // Start of use strict
+    // Smooth scrolling using jQuery easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: (target.offset().top - 56)
+                }, 1000, "easeInOutExpo");
+                return false;
+            }
+        }
+    });
+})(jQuery); // End of use strict
+// Add scrollspy to <body>
+$('body').scrollspy({
+    target: "nav",
+    offset: 57
+});
+//WoW Js for Animate CSS
+new WOW().init();
+//Smooth Scrolling
+$('.slide-in').click(function (e) {
+    e.preventDefault();
+});
+$('.slide-in').on('click', function () {
+    $('.fade-in').toggleClass('show');
+});
+//Show Preloader while loading
+$(window).on('load', function () {
+    $(".preloader").css("top", "100%");
+    $("#home-bg h1:nth-of-type(1)").addClass("bounceInDown");
+    $("#home-bg h1:nth-of-type(2)").addClass("fadeInDown");
+    $("body").removeClass("loading");
+});
 //Start off Document Ready
 $(document).ready(function () {
     var scroll_start = 0;
-    var scroll_height = $("#home").height() - $("nav").height();
-    var triggerTop = $("#home").height() / 2;
+    var scroll_height = $("#home").height() - $("nav").outerHeight();
     //Navbar Actions
     $(document).scroll(function () {
         scroll_start = $(this).scrollTop();
         if (scroll_start > scroll_height) {
             $("#home nav").css({ "top": "0", "background": "white", "box-shadow": "0 1px 8px 3px rgba(0, 0, 0, 0.2)", "position": "fixed" });
-            $(".navbar li a").css("color", "black");
-        }
-        else if (scroll_start > triggerTop) {
-            $("#home nav").css({ "top": "-100%" });
+            $(".nav-link").addClass("link-anim");
         }
         else {
             $("#home nav").css({ "top": "0", "background": "transparent", "box-shadow": "none", "position": "absolute" });
-            $(".navbar li a").css("color", "white");
+            $(".nav-link").removeClass("link-anim");
         }
     });
     $("body").addClass("loading");
@@ -162,11 +162,30 @@ $(document).ready(function () {
     $(".btn-modal").click(function () {
         $("#portfolioModal").modal();
         $(".carousel").css("display", "none");
+        var visitbtn = $(".visit-btn");
+        visitbtn.show();
         var index = $(this).closest(".portfolio-card").index() + 1;
         var count = $(".carousel:nth-child(" + (index + 1) + ") .carousel-item").length;
         $(".carousel").eq(index - 1).css("display", "block");
         $("#temp").val(index);
         $("#temp1").val(count);
+        switch (index) {
+            case 1:
+                visitbtn.attr("href", "laundryawesome.github.io");
+                break;
+            case 2:
+                visitbtn.attr("href", "sweetsunny.github.io");
+                break;
+            case 3:
+                visitbtn.hide();
+                break;
+            case 4:
+                visitbtn.hide();
+                break;
+            case 5:
+                visitbtn.hide();
+                break;
+        }
         findActive(0);
     });
 });

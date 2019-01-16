@@ -1,0 +1,75 @@
+#portfolioModal{ 
+    .modal-dialog{
+        margin: 0 auto;
+        #close-modal{
+            position: absolute;
+            font-size: 2.5rem;
+            right: 3%;
+            bottom: 3%;
+            z-index: 1000;
+        }
+        .modal-body{
+            height:99vh;
+            padding: 0;
+            .carousel{
+                .carousel-item{
+                    img{height: 100%; width: 100%;min-height: 200px;}
+                }
+                a.carousel-controller{
+                    top: unset;
+                    bottom: 0;
+                    height: 50px;
+                    width: 50px;
+                    background: lighten(#000,30%);
+                    opacity: 0.5;
+                }
+            }
+            .modal-details{
+                padding: 1.2rem;
+                .project-title{
+                    font-family: nunito-regular;
+                    font-size: 1.8rem;
+                    @media screen and (max-width: 476px){
+                        &{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .project-tag{
+                    font-family: nunito-extrabold;
+                    text-transform: uppercase;
+                    color: lighten(black,50%);
+                    @media screen and (max-width: 476px){
+                        &{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                hr{margin: 0.8rem 0}
+                .project-details{font-family: nunito-light}
+                    @media screen and (max-width: 476px){
+                        &{
+                            font-size: 12px;
+                            margin: 0.3rem 0;
+                        }
+                    }
+            }
+            .visit-btn{
+                position: absolute;
+                font-family: nunito-extrabold;
+                bottom: 0;
+                padding: 8px 16px;
+                margin: 1rem 1.2rem;
+                background: #f75f45;
+                border: 2px solid #f75f45;
+                color: white;
+                transition: 0.5s ease-in-out;
+                &:hover{
+                    border: 2px solid #f75f45;
+                    background: transparent;
+                    color: #f75f45;
+                }
+            }
+        }
+    }
+}

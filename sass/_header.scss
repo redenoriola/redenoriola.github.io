@@ -1,0 +1,78 @@
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.863),rgba(0, 0, 0, 0.545)), url("https://www.dl.dropboxusercontent.com/s/zn1hsrah85kkknm/topcover.jpg?dl=0") center ;
+  background-size:cover; 
+  height: 100vh;
+    #home-bg{
+        position: relative;
+        height:100%;
+        width:100vw;
+        text-align: center;
+            .intro{
+                margin-top: -500px;
+                margin:auto;
+                color: white;
+                font-family: nunito-bold;
+                font-size: 15px;
+                    h1{
+                        font-size: 5rem;
+                        span{color:#F05033}
+                        &:nth-child(2){
+                            font-family: nunito-extrabold;
+                        }
+                        @media screen and (max-width: 576px) {
+                            & {
+                                font-size: 3.5rem;
+                            }
+                        }
+                    }
+                    .intro p{
+                        letter-spacing: 3px;
+                        background: rgba(0, 0, 0, 0.51);
+                        width: 40%;
+                        padding: 10px;
+                        margin: auto;
+                    }
+            }
+    }
+    .navbar {
+        min-height: 50px;
+        line-height: 50px;
+        width:100%;
+        background: transparent;
+        position: absolute;
+        z-index: 100;
+        transition: all 1s ease;
+        .navbar-toggler{
+            right: 0;
+            padding: 0;
+            .navbar-toggler-icon{
+                color: rgb(255, 90, 61);
+                i{font-size: 30px;}
+            }
+        }
+            ul{
+                margin:0 100px;
+                .nav-link{
+                    font-family: nunito-extrabold;
+                    color: white;
+                    margin: 0 15px;
+                    font-size: 14px;
+                    font-weight: 500px;
+                    padding: 0.3rem 0;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    &:hover{
+                        transition: 0.3s ease;
+                        color: #f8755e;
+                    }
+                    &.active {
+                    color: #f8755e !important;
+                    background-color: transparent;
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+    }
+}
