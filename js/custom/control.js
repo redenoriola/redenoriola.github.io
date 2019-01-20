@@ -171,10 +171,10 @@ $(document).ready(function () {
         $("#temp1").val(count);
         switch (index) {
             case 1:
-                visitbtn.attr("href", "laundryawesome.github.io");
+                visitbtn.attr("href", "https://redenoriola.github.io/laundryawesome/");
                 break;
             case 2:
-                visitbtn.attr("href", "sweetsunny.github.io");
+                visitbtn.attr("href", "https://redenoriola.github.io/sweetsunny/");
                 break;
             case 3:
                 visitbtn.hide();
