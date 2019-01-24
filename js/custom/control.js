@@ -34,7 +34,7 @@ var sweetsunny = [
 var genesis = [
     {
         tag: 'Overview',
-        details: 'GENESIS: A 2D Evolution Game is my thesis project when I was in 4th year college. This intends to increase the knowledge of players in terms of human evolution. The players are able to familiarize themselves with the evolution of human based on the book of Richard Dawkins Ancestors Tale.',
+        details: 'GENESIS: 2D Evolution Game is my thesis project when I was in 4th year college. This intends to increase the knowledge of players in terms of human evolution. The players are able to familiarize themselves with the evolution of human based on the book of Richard Dawkins Ancestors Tale.',
     },
     {
         tag: 'In Game',
@@ -91,6 +91,16 @@ var humbleshop = [
     {
         tag: "Orders",
         details: "This is where the customer can see all of his/her orders check the time and date of its arrival. ",
+    },
+];
+var tribute = [
+    {
+        tag: "Overview",
+        details: "This is a tribute page I made for the Fifteen Martyrs of Bicol. This project is from Free Code Camp and is hosted in Codepen. I decided not to use any CSS framework, but instead I used a javascript library called fancybox. ",
+    },
+    {
+        tag: "Content",
+        details: "This project contains details of the Fifteen Martyrs of Bicol and their legacy as well as a gallery of their faces on the monument in Naga City",
     },
 ];
 (function ($) {
