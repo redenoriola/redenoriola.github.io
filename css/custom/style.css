@@ -441,6 +441,8 @@ body, html {
       background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png?dl=0") center center/cover; }
     #portfolio .portfolio-card:nth-child(5) {
       background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png?dl=0") center center/cover; }
+    #portfolio .portfolio-card:nth-child(6) {
+      background: url("https://www.dl.dropboxusercontent.com/s/izpy5gkc2uvi3yb/tribute0.png?dl=0") center center/cover; }
     #portfolio .portfolio-card .tools {
       opacity: 0;
       text-align: center;
