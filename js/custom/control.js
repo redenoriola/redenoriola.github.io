@@ -195,6 +195,9 @@ $(document).ready(function () {
             case 5:
                 visitbtn.hide();
                 break;
+            case 6:
+                visitbtn.attr("href", "https://codepen.io/redenoriola/full/pGJKKx");
+                break;
         }
         findActive(0);
     });
@@ -248,5 +251,10 @@ function findActive(x) {
             $(".modal-details .project-tag").html(humbleshop[active_id].tag);
             $(".modal-details .project-details").html(humbleshop[active_id].details);
             break;
+        case "6":
+            $(".modal-details .project-title").html("Fifteen Martyrs of Bicol Tribute Page");
+            $(".modal-details .project-tag").html(tribute[active_id].tag);
+            $(".modal-details .project-details").html(tribute[active_id].details);
+            break;            
     }
 }
