@@ -1,28 +1,5 @@
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@font-face {
-  font-family: 'nunito-regular';
-  src: url(../../fonts/NunitoSans-Regular.ttf);
-  font-style: normal;
-  font-weight: 600; }
-@font-face {
-  font-family: 'nunito-semibold';
-  src: url(../../fonts/NunitoSans-SemiBold.ttf);
-  font-style: normal;
-  font-weight: 400; }
-@font-face {
-  font-family: 'nunito-bold';
-  src: url(../../fonts/NunitoSans-Bold.ttf);
-  font-weight: 800; }
-@font-face {
-  font-family: 'nunito-extrabold';
-  src: url(../../fonts/NunitoSans-ExtraBold.ttf);
-  font-style: bold;
-  font-weight: 800; }
-@font-face {
-  font-family: 'nunito-light';
-  src: url(../../fonts/NunitoSans-Light.ttf);
-  font-weight: 800; }
 .section-holder {
   padding: 80px 0 !important; }
   @media screen and (max-width: 576px) {
@@ -30,14 +7,14 @@
       padding: 50px 0 !important; } }
 
 .section-title {
-  font-family: nunito-bold;
-  font-size: 300px;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   line-height: 1.14;
   position: relative;
   margin-bottom: 70px; }
   .section-title h1 {
-    position: relative; }
+    position: relative;
+    font-weight: 700; }
     .section-title h1:after {
       content: '';
       height: 30px;
@@ -49,7 +26,8 @@
       display: block; }
 
 .highlight {
-  font-family: nunito-bold;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
   color: #000;
   font-size: 18px; }
 
@@ -112,7 +90,8 @@
   left: 0; }
 
 .btn-effect span {
-  font-family: nunito-semibold;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
   position: relative;
   z-index: 100; }
 
@@ -127,7 +106,8 @@
   .container-fluid {
     padding: 0; } }
 .card h3 {
-  font-family: nunito-light;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
   margin-top: 10px;
   font-size: 18px; }
 
@@ -252,14 +232,15 @@
       margin-top: -500px;
       margin: auto;
       color: white;
-      font-family: nunito-bold;
       font-size: 15px; }
       #home #home-bg .intro h1 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
         font-size: 5rem; }
         #home #home-bg .intro h1 span {
           color: #F05033; }
         #home #home-bg .intro h1:nth-child(2) {
-          font-family: nunito-extrabold; }
+          font-weight: 800; }
         @media screen and (max-width: 576px) {
           #home #home-bg .intro h1 {
             font-size: 3.5rem; } }
@@ -287,11 +268,11 @@
     #home .navbar ul {
       margin: 0 100px; }
       #home .navbar ul .nav-link {
-        font-family: nunito-extrabold;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 800;
         color: white;
         margin: 0 15px;
         font-size: 14px;
-        font-weight: 500px;
         padding: 0.3rem 0;
         letter-spacing: 0.5px;
         text-transform: uppercase; }
@@ -335,9 +316,12 @@ body, html {
           bottom: 0;
           top: 38px; }
       #about-me #about-content .cv-info .cv-info-detail {
-        font-family: nunito-light;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
         letter-spacing: 1px;
         margin: 40px 0 30px 0; }
+        #about-me #about-content .cv-info .cv-info-detail h6 {
+          font-weight: 300; }
         #about-me #about-content .cv-info .cv-info-detail .progress {
           height: 2px;
           margin: 20px 0 30px 0; }
@@ -347,7 +331,7 @@ body, html {
           background: #FF3636;
           transition: all 3s;
           letter-spacing: 0; }
-          #about-me #about-content .cv-info .cv-info-detail .progress-bar .progress-bar:before {
+          #about-me #about-content .cv-info .cv-info-detail .progress-bar:before {
             content: attr(data-width);
             margin-top: -15px;
             position: absolute;
@@ -355,24 +339,28 @@ body, html {
             border-radius: 10px;
             font-size: 10px;
             color: black;
-            font-family: nunito-bold; }
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700; }
     #about-me #about-content .cv-edu {
       border-radius: 5px;
       box-shadow: 0px 3px 0px 2px rgba(0, 0, 0, 0.05);
       border: 1px solid #efefef; }
       #about-me #about-content .cv-edu .cv-edu-date {
-        font-family: nunito-bold;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
         color: #F05033;
         font-size: 13px; }
       #about-me #about-content .cv-edu .cv-edu-school {
         font-size: 15px; }
       #about-me #about-content .cv-edu .cv-edu-detail {
-        font-family: nunito-light;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
         font-size: 15px;
         text-align: justify; }
     #about-me #about-content .cv-resume {
       position: relative;
-      font-family: nunito-regular; }
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 400; }
       #about-me #about-content .cv-resume h5 {
         margin-top: 15px;
         font-size: 15px; }
@@ -432,17 +420,17 @@ body, html {
       opacity: 1;
       background: #F6F6F7; }
     #portfolio .portfolio-card:nth-child(1) {
-      background: url("https://www.dl.dropboxusercontent.com/s/7l5094i0my9h6yi/laundrywash0.png?dl=0") center left/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/7l5094i0my9h6yi/laundrywash0.png?") center left/cover; }
     #portfolio .portfolio-card:nth-child(2) {
-      background: url("https://www.dl.dropboxusercontent.com/s/vdgmt3kzozkrity/sweetsunny0.png?dl=0ng") center left/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/vdgmt3kzozkrity/sweetsunny0.png?ng") center left/cover; }
     #portfolio .portfolio-card:nth-child(3) {
-      background: url("https://www.dl.dropboxusercontent.com/s/9sp0enz6e15vfp6/genesis0.png?dl=0") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/9sp0enz6e15vfp6/genesis0.png?") center center/cover; }
     #portfolio .portfolio-card:nth-child(4) {
-      background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png?dl=0") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png?") center center/cover; }
     #portfolio .portfolio-card:nth-child(5) {
-      background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png?dl=0") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png?") center center/cover; }
     #portfolio .portfolio-card:nth-child(6) {
-      background: url("https://www.dl.dropboxusercontent.com/s/izpy5gkc2uvi3yb/tribute0.png?dl=0") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/izpy5gkc2uvi3yb/tribute0.png?") center center/cover; }
     #portfolio .portfolio-card .tools {
       opacity: 0;
       text-align: center;
@@ -451,7 +439,8 @@ body, html {
       height: 100%; }
       #portfolio .portfolio-card .tools h1 {
         color: #000;
-        font-family: nunito-extrabold;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 800;
         font-size: 20px;
         text-transform: uppercase; }
       #portfolio .portfolio-card .tools div {
@@ -462,7 +451,8 @@ body, html {
         font-size: 20px;
         padding: 0; }
         #portfolio .portfolio-card .tools div span {
-          font-family: nunito-light;
+          font-family: 'Nunito Sans', sans-serif;
+          font-weight: 300;
           font-size: 18px;
           color: #F05033;
           padding: 0 10px; }
@@ -498,7 +488,8 @@ body, html {
 #contact-me {
   background-color: #fff;
   position: relative;
-  font-family: nunito-regular; }
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400; }
   #contact-me:before {
     content: "";
     position: absolute;
@@ -523,10 +514,12 @@ body, html {
       font-size: 35px;
       color: #FF3636; }
     #contact-me .contact-details .contact-details-col h5 {
-      font-family: nunito-bold;
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 700;
       letter-spacing: 0px; }
     #contact-me .contact-details .contact-details-col p {
-      font-family: nunito-semibold;
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 600;
       color: #818181;
       font-size: 15px; }
   #contact-me .form-control {
@@ -586,13 +579,15 @@ footer#social-media {
     #portfolioModal .modal-dialog .modal-body .modal-details {
       padding: 1.2rem; }
       #portfolioModal .modal-dialog .modal-body .modal-details .project-title {
-        font-family: nunito-extrabold;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 800;
         font-size: 1.8rem; }
         @media screen and (max-width: 476px) {
           #portfolioModal .modal-dialog .modal-body .modal-details .project-title {
             font-size: 1.2rem; } }
       #portfolioModal .modal-dialog .modal-body .modal-details .project-tag {
-        font-family: nunito-extrabold;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 800;
         text-transform: uppercase;
         color: gray; }
         @media screen and (max-width: 476px) {
@@ -601,14 +596,16 @@ footer#social-media {
       #portfolioModal .modal-dialog .modal-body .modal-details hr {
         margin: 0.8rem 0; }
       #portfolioModal .modal-dialog .modal-body .modal-details .project-details {
-        font-family: nunito-light; }
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300; }
       @media screen and (max-width: 476px) {
         #portfolioModal .modal-dialog .modal-body .modal-details {
           font-size: 12px;
           margin: 0.3rem 0; } }
     #portfolioModal .modal-dialog .modal-body .visit-btn {
       position: absolute;
-      font-family: nunito-extrabold;
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 800;
       bottom: 0;
       padding: 8px 16px;
       margin: 1rem 1.2rem;

@@ -1,31 +1,4 @@
-  @font-face {
-    font-family: 'nunito-regular';
-    src: url(../../fonts/NunitoSans-Regular.ttf);
-    font-style: normal;
-    font-weight: 600;  
-  }
-  @font-face{
-    font-family: 'nunito-semibold';
-    src: url(../../fonts/NunitoSans-SemiBold.ttf);
-    font-style: normal;
-    font-weight: 400;
-  }
-  @font-face{
-    font-family: 'nunito-bold';
-    src: url(../../fonts/NunitoSans-Bold.ttf);
-    font-weight: 800;
-  }
-  @font-face{
-    font-family: 'nunito-extrabold';
-    src: url(../../fonts/NunitoSans-ExtraBold.ttf);
-    font-style: bold;
-    font-weight: 800;
-  }
-  @font-face{
-    font-family: 'nunito-light';
-    src: url(../../fonts/NunitoSans-Light.ttf);
-    font-weight: 800;
-  }
+
 .section-holder{
     padding: 80px 0 !important;
         @media screen and (max-width: 576px) {
@@ -33,14 +6,14 @@
     }
 }
 .section-title{
-  font-family: nunito-bold;   
-  font-size: 300px;
-  font-weight: 700;
+font-family: 'Nunito Sans', sans-serif;
+font-weight: 700;
   line-height: 1.14;
   position: relative;
   margin-bottom: 70px;
     h1{
     position: relative;
+    font-weight: 700;
         &:after{
             content: '';
             height: 30px;
@@ -54,7 +27,8 @@
     }   
 }
 .highlight{
-    font-family: nunito-bold;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
     color:#000;
     font-size:18px;
 }
@@ -119,7 +93,8 @@
     left:0;
 }
 .btn-effect span{
-    font-family: nunito-semibold;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
     position: relative;
     z-index: 100;
 }
@@ -138,7 +113,8 @@
     }
   }
 .card h3{
-    font-family: nunito-light;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
     margin-top:10px;
     font-size: 18px;
 }

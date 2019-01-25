@@ -27,7 +27,8 @@
             .modal-details{
                 padding: 1.2rem;
                 .project-title{
-                    font-family: nunito-extrabold;
+                    font-family: 'Nunito Sans', sans-serif;
+                    font-weight: 800;
                     font-size: 1.8rem;
                     @media screen and (max-width: 476px){
                         &{
@@ -36,7 +37,8 @@
                     }
                 }
                 .project-tag{
-                    font-family: nunito-extrabold;
+                    font-family: 'Nunito Sans', sans-serif;
+                    font-weight: 800;
                     text-transform: uppercase;
                     color: lighten(black,50%);
                     @media screen and (max-width: 476px){
@@ -46,7 +48,7 @@
                     }
                 }
                 hr{margin: 0.8rem 0}
-                .project-details{font-family: nunito-light}
+                .project-details{font-family: 'Nunito Sans', sans-serif; font-weight: 300;}
                     @media screen and (max-width: 476px){
                         &{
                             font-size: 12px;
@@ -56,7 +58,8 @@
             }
             .visit-btn{
                 position: absolute;
-                font-family: nunito-extrabold;
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight: 800;
                 bottom: 0;
                 padding: 8px 16px;
                 margin: 1rem 1.2rem;

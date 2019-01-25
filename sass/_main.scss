@@ -32,9 +32,11 @@ body,html{
                     }
                 }
                 .cv-info-detail{
-                    font-family: nunito-light;
+                    font-family: 'Nunito Sans', sans-serif;
+                    font-weight: 300;
                     letter-spacing: 1px;
                     margin: 40px 0 30px 0;
+                    h6{font-weight: 300}
                     .progress{
                         height:2px; 
                         margin: 20px 0 30px 0;
@@ -45,7 +47,7 @@ body,html{
                         background:#FF3636;
                         transition: all 3s;
                         letter-spacing: 0;
-                        .progress-bar:before{
+                        &:before{
                             content: attr(data-width);
                             margin-top:-15px;
                             position: absolute;
@@ -53,7 +55,8 @@ body,html{
                             border-radius: 10px;
                             font-size: 10px;
                             color:black;
-                            font-family: nunito-bold;
+                            font-family: 'Nunito Sans', sans-serif;
+                            font-weight: 700;
                         }
                     }
                 }
@@ -63,7 +66,8 @@ body,html{
             box-shadow: 0px 3px 0px 2px rgba(0, 0, 0, 0.05);
             border: 1px solid #efefef;
             .cv-edu-date{
-                font-family: nunito-bold;
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight: 700;
                 color: #F05033;
                 font-size: 13px;
             }
@@ -71,14 +75,16 @@ body,html{
                 font-size: 15px;
             }
             .cv-edu-detail{
-                font-family: nunito-light;
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight: 300;
                 font-size: 15px;
                 text-align: justify;
             }
         }
         .cv-resume{
             position: relative;
-            font-family: nunito-regular;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 400;
             h5{
                 margin-top:15px;
                 font-size: 15px;
@@ -152,20 +158,23 @@ body,html{
                 background: #F6F6F7;
             }
            &:nth-child(1){
-                background: url("https://www.dl.dropboxusercontent.com/s/7l5094i0my9h6yi/laundrywash0.png?dl=0") center left/cover;
+                background: url("https://www.dl.dropboxusercontent.com/s/7l5094i0my9h6yi/laundrywash0.png?") center left/cover;
 
             }
             &:nth-child(2){
-                background: url("https://www.dl.dropboxusercontent.com/s/vdgmt3kzozkrity/sweetsunny0.png?dl=0ng") center left/cover;
+                background: url("https://www.dl.dropboxusercontent.com/s/vdgmt3kzozkrity/sweetsunny0.png?ng") center left/cover;
             }
             &:nth-child(3){
-                background: url("https://www.dl.dropboxusercontent.com/s/9sp0enz6e15vfp6/genesis0.png?dl=0") center center/cover;
+                background: url("https://www.dl.dropboxusercontent.com/s/9sp0enz6e15vfp6/genesis0.png?") center center/cover;
             }
             &:nth-child(4){
-                background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png?dl=0") center center/cover;
+                background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png?") center center/cover;
             }
             &:nth-child(5){
-                background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png?dl=0") center center/cover;
+                background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png?") center center/cover;
+            }
+            &:nth-child(6){
+                background: url("https://www.dl.dropboxusercontent.com/s/izpy5gkc2uvi3yb/tribute0.png?") center center/cover;
             }
             .tools{
                 opacity: 0;
@@ -175,7 +184,8 @@ body,html{
                 height:100%;
                 h1{
                     color: #000;
-                    font-family: nunito-extrabold;
+                    font-family: 'Nunito Sans', sans-serif;
+                    font-weight: 800;
                     font-size: 20px;
                     text-transform: uppercase;
                 }
@@ -187,7 +197,8 @@ body,html{
                     font-size: 20px;
                     padding: 0;
                     span{
-                        font-family: nunito-light;
+                        font-family: 'Nunito Sans', sans-serif;
+                        font-weight: 300;
                         font-size:18px;
                         color: #F05033;
                         padding: 0 10px;
@@ -230,7 +241,8 @@ body,html{
 #contact-me{
     background-color: #fff;
     position: relative;
-    font-family: nunito-regular;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
     &:before{
         content: "";
         position: absolute;
@@ -259,11 +271,13 @@ body,html{
                 color: #FF3636;
             }
             h5{
-                font-family: nunito-bold;
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight: 700;
                 letter-spacing: 0px;
             }   
             p{
-                font-family: nunito-semibold;
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight: 600;
                 color: #818181;
                 font-size: 15px;
             }
