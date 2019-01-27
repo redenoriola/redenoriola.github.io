@@ -220,7 +220,7 @@
   100% {
     height: 0; } }
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.545)), url("https://www.dl.dropboxusercontent.com/s/zn1hsrah85kkknm/topcover.jpg?dl=0") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.545)), url("https://images.unsplash.com/photo-1529675641475-78780f1fd4b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") center;
   background-size: cover;
   height: 100vh; }
   #home #home-bg {
@@ -420,17 +420,17 @@ body, html {
       opacity: 1;
       background: #F6F6F7; }
     #portfolio .portfolio-card:nth-child(1) {
-      background: url("https://www.dl.dropboxusercontent.com/s/7l5094i0my9h6yi/laundrywash0.png?") center left/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/7l5094i0my9h6yi/laundrywash0.png") center left/cover; }
     #portfolio .portfolio-card:nth-child(2) {
-      background: url("https://www.dl.dropboxusercontent.com/s/vdgmt3kzozkrity/sweetsunny0.png?ng") center left/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/vdgmt3kzozkrity/sweetsunny0.png") center left/cover; }
     #portfolio .portfolio-card:nth-child(3) {
-      background: url("https://www.dl.dropboxusercontent.com/s/9sp0enz6e15vfp6/genesis0.png?") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/9sp0enz6e15vfp6/genesis0.png") center center/cover; }
     #portfolio .portfolio-card:nth-child(4) {
-      background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png?") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/l7wisb36f058v27/dms0.png") center center/cover; }
     #portfolio .portfolio-card:nth-child(5) {
-      background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png?") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/dhrnycx1dp0m9nx/humbleshop0.png") center center/cover; }
     #portfolio .portfolio-card:nth-child(6) {
-      background: url("https://www.dl.dropboxusercontent.com/s/izpy5gkc2uvi3yb/tribute0.png?") center center/cover; }
+      background: url("https://www.dl.dropboxusercontent.com/s/izpy5gkc2uvi3yb/tribute0.png") center center/cover; }
     #portfolio .portfolio-card .tools {
       opacity: 0;
       text-align: center;
