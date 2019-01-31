@@ -297,6 +297,17 @@ body,html{
             position: relative; 
         }
     }
+    #success{
+        height: 0;
+        display: none;
+        width: fit-content;
+        margin: auto;
+        background: greenyellow;
+        padding: 10px 20px;
+        color: #ffffff;
+        transition: 0.3s ease-out; 
+        #close-success-alert{cursor: pointer}
+    }
 }
  
 

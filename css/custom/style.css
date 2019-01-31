@@ -535,6 +535,17 @@ body, html {
     color: #495057; }
     #contact-me .form-control .submit-form {
       position: relative; }
+  #contact-me #success {
+    height: 0;
+    display: none;
+    width: fit-content;
+    margin: auto;
+    background: greenyellow;
+    padding: 10px 20px;
+    color: #ffffff;
+    transition: 0.3s ease-out; }
+    #contact-me #success #close-success-alert {
+      cursor: pointer; }
 
 footer#social-media {
   text-align: center;

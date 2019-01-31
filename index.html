@@ -268,7 +268,7 @@
         </div>
       </div>
       <div class="contact-details col-sm-12 flex-wrap mt-4 wow bounceIn" data-wow-delay="0.5s">
-        <form action="https://formspree.io/reden.oriola@gmail.com" method="POST">
+        <form id="contact-form">
           <div class="pt-4 pb-4 ">
             <div class="flex-wrap col-md-12 d-flex mt-3 p-0">
               <div class="col-md-6">
@@ -283,6 +283,9 @@
             </div>
             <div class="col-md-12">
               <textarea placeholder="Type your message here" class="form-control mt-4" rows="8" name="message" id="message"></textarea>
+            </div>
+            <div id="success" class="mt-4">
+              <div>Your message was sent successfully. Thanks! <span id="close-success-alert"><i class="fa fa-times"></i></span></div>
             </div>
             <div class="submit-form col-md-12 mt-4 mb-4">
               <button class="btn btn-effect" type="submit"><span>Send Message</span></button>
