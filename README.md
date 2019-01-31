@@ -12,8 +12,8 @@ Here's a live demo: https://redenoriola.github.io/
 
 ## Screenshots
 
-![image](https://dl.dropboxusercontent.com/s/eyhdsp45265yfok/page-screencap1%20%282%29.png?dl=0)
+![image](https://www.dl.dropboxusercontent.com/s/xlvbum1sw51bwww/1.png)
 
-![header](https://dl.dropboxusercontent.com/s/n32b506pgyeu4va/portfolio-website%20%281%29.png)
+![header](https://www.dl.dropboxusercontent.com/s/rcf5a73ss3jrnuz/2.png)
 
 I hope you enjoy and get a cool idea out of this project.
