@@ -206,7 +206,7 @@ $(document).ready(function () {
         e.preventDefault();
         $.ajax({
             method: 'POST',
-            url: '//formspree.io/redenoriola@gmail.com',
+            url: 'https://formspree.io/reden.oriola@gmail.com',
             data: $('#contact-form').serialize(),
             datatype: 'json',
             success: function () {
