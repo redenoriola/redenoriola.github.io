@@ -207,7 +207,7 @@ $(document).ready(function () {
         $.ajax({
             method: 'POST',
             url: 'https://formspree.io/redenoriola@gmail.com',
-            data: $('#contact-form').serialize(),
+            data: { message: $('form').serialize() },
             datatype: 'json',
             success: function () {
                 $('#success').css({ "display": "block", "height": "auto" });
