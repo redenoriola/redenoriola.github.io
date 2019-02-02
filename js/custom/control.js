@@ -206,7 +206,7 @@ $(document).ready(function () {
         e.preventDefault();
         $.ajax({
             method: 'POST',
-            url: 'https://formspree.io/reden.oriola@gmail.com',
+            url: 'https://formspree.io/reden.oriola@bicol-u.edu.ph',
             data: $('#contact-form').serialize(),
             datatype: 'json',
             success: function () {
