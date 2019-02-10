@@ -3,7 +3,7 @@ This is Reden Oriola's portfolio website
 
 This is my personal portfolio website containing differents projects that I have done.
 This repository is connected to Netlify.
-Live Demo: https://redenoriola.netlify.com/
+Refer to this link for full functionality: https://redenoriola.netlify.com/
 
 ## Tools Used
 
