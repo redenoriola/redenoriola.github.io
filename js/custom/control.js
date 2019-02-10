@@ -202,6 +202,17 @@ $(document).ready(function () {
         findActive(0);
     });
     // CONTACT FORM
+    $("#contact-form").submit(function(e) {
+      e.preventDefault();
+
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+        $('#success').css({ "display": "block", "height": "auto" });
+        $('#contact-form').find("input[type=text], input[type=email], textarea").val("");
+      });
+    });
+    
+    /*
     $('#contact-form').submit(function (e) {
         e.preventDefault();
         $.ajax({
@@ -214,7 +225,8 @@ $(document).ready(function () {
                 $('#contact-form').find("input[type=text], input[type=email], textarea").val("");
             }
         });
-    });
+    });*/
+    
     $("#close-success-alert").click(function (e) {
         $('#success').css({ "display": "none", "height": "0" });
     });
