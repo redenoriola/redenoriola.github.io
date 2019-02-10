@@ -125,7 +125,16 @@ $('body').scrollspy({
     offset: 57
 });
 //WoW Js for Animate CSS
-new WOW().init();
+wow = new WOW(
+{
+boxClass:     'wow',      // default
+animateClass: 'animated', // default
+offset:       0,          // default
+mobile:       false,       // default
+live:         true        // default
+}
+                )
+wow.init();
 //Smooth Scrolling
 $('.slide-in').click(function (e) {
     e.preventDefault();
