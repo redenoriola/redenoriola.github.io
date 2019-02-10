@@ -1,8 +1,9 @@
 # redenoriola.github.io
 This is Reden Oriola's portfolio website
-
 This is my personal portfolio website containing differents projects that I have done.
-Here's a live demo: https://redenoriola.github.io/
+
+This repository is connected to Netlify. Please refer to this link for a full it's full functionality 
+Live Demo: https://redenoriola.netlify.com/
 
 ## Tools Used
 
